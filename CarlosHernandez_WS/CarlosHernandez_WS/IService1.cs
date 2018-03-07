@@ -10,13 +10,13 @@ namespace CarlosHernandez_WS
 {
     // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IService1" en el código y en el archivo de configuración a la vez.
     [ServiceContract]
-    public interface Icmmoneycash
+    public interface I_cmmoneycash
     {
 
         [OperationContract]
 
-        Correspon ObtenerCorrespon(string Cor_Nombre);
-        Oficinas ObtenerOficinas(string Ofi_nombre);
+        Correspon ObtenerCorrespon(string Cor_Nombre, int Cor_ID);
+        Oficinas ObtenerOficinas(string Ofi_nombre, int Ofi_ID);
 
         // TODO: agregue aquí sus operaciones de servicio
     }

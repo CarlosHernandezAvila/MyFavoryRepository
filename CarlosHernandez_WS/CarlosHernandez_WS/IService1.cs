@@ -10,17 +10,41 @@ namespace CarlosHernandez_WS
 {
     // NOTA: puede usar el comando "Rename" del menú "Refactorizar" para cambiar el nombre de interfaz "IService1" en el código y en el archivo de configuración a la vez.
     [ServiceContract]
-    public interface IService1
+    public interface Icmmoneycash
     {
 
         [OperationContract]
-        string GetData(int value);
 
-        [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        Correspon ObtenerCorrespon(string Cor_Nombre);
+        Oficinas ObtenerOficinas(string Ofi_nombre);
 
         // TODO: agregue aquí sus operaciones de servicio
     }
+
+
+    [DataContract]
+    public class Correspon
+
+    {
+        [DataMember]
+        public string Cor_nombre { get; set; }
+        [DataMember]
+        public int Cor_ID { get; set; }
+
+    }
+
+
+    [DataContract]
+
+    public class Oficinas
+    {
+        [DataMember]
+        public string Ofi_nombre { get; set; }
+        [DataMember]
+        public string Ofi_ID { get; set; }
+
+    }
+
 
 
     // Utilice un contrato de datos, como se ilustra en el ejemplo siguiente, para agregar tipos compuestos a las operaciones de servicio.

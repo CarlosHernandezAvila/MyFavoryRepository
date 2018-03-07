@@ -23,7 +23,7 @@ namespace CarlosHernandez_WS
 
 
     [DataContract]
-    public class Correspon
+    public class Correspon:CorresponRespuesta
 
     {
         [DataMember]
@@ -33,16 +33,31 @@ namespace CarlosHernandez_WS
 
     }
 
+    [DataContract]
+    public class CorresponRespuesta
+    {
+        public string RespuestaCorrespon { get; set; }
+        public string ErrorCorrespon { get; set; }
+    }
+
 
     [DataContract]
 
-    public class Oficinas
+    public class Oficinas : OficinaRespuesta
     {
         [DataMember]
         public string Ofi_nombre { get; set; }
         [DataMember]
-        public string Ofi_ID { get; set; }
+        public int Ofi_ID { get; set; }
 
+    }
+
+    [DataContract]
+
+    public class OficinaRespuesta
+    {
+        public string RespuestaOficina { get; set; }
+        public string ErrorOficina { get; set; }
     }
 
 

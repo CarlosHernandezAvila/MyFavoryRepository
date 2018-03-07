@@ -30,14 +30,29 @@ namespace CarlosHernandez_WS
         //    }
         //    return composite;
         //}
-        public Correspon ObtenerCorrespon(string Cor_Nombre)
+        public Correspon ObtenerCorrespon(string Cor_Nombre, int Cor_ID)
         {
-            throw new NotImplementedException();
+            if (Cor_ID == 1)
+            {
+                return new Correspon();
+            }
+            else
+            {
+                return new Correspon() { ErrorCorrespon = "Erro al intetar Obtener la Informacion de la BD los Corresponsales" };
+
+            }
         }
 
-        public Oficinas ObtenerOficinas(string Ofi_nombre)
+        public Oficinas ObtenerOficinas(string Ofi_nombre,int Ofi_ID)
         {
-            throw new NotImplementedException();
+            if (Ofi_ID == 1)
+            {
+                return new Oficinas();
+            }
+            else
+            {
+                return new Oficinas() { ErrorOficina = "Erro al intetar Obtener la Informacion de la BD los Corresponsales" };
+            }
         }
     }
 }
